@@ -344,9 +344,9 @@ class _BookRendererState extends State<BookPlayerRenderer>
     int page;
     if (epubLocation.page is String) {
       String filePath = p.normalize(epubLocation.page as String);
-
+      String newPath=Uri.decodeFull(filePath);
       page = getFilesFromEpubSpine(widget.epubBook).indexWhere(
-        (element) => element.FileName == filePath,
+        (element) => element.FileName == newPath,
       );
 
       if (page == -1) {

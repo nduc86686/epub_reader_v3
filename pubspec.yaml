@@ -17,9 +17,10 @@ dependencies:
   collection: ^1.15.0
   epubz:
   #  path: ../dart-epubz
-    git:
-      url: https://github.com/FlafyDev/dart-epubz.git
-      ref: dev
+    path: ./package/dart-epubzc
+#    git:
+#      url: https://github.com/FlafyDev/dart-epubz.git
+#      ref: dev
   http: ^0.13.4
   palette_generator: ^0.3.3
   scroll_snap_list: ^0.8.6
@@ -42,7 +43,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   equatable: ^2.0.3
   stack: ^0.2.1
-  file_picker: any
+  file_picker: ^4.6.1
   flutter_phoenix: ^1.0.0
   archive: ^3.3.1
   flutter_file_dialog: ^2.3.0

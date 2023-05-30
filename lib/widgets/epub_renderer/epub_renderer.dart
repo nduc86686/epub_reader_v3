@@ -390,6 +390,14 @@ class _EpubRendererState extends State<EpubRenderer> {
             // },
             onWebViewCreated: (controller) async {
               webViewController = controller;
+              // Xử lý sự kiện lỗi khi tải ảnh
+              webViewController.addJavaScriptHandler(
+                handlerName: 'onImageLoadError',
+                callback: (args) {
+                  // Xử lý lỗi tải ảnh ở đây
+                  print('Lỗi tải ảnh: ${args[0]}');
+                },
+              );
               webViewController.addJavaScriptHandler(
                 handlerName: "load",
                 callback: onLoad,
